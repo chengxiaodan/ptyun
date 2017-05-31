@@ -1,0 +1,243 @@
+.wh1 {
+    width: 720px;
+    height: auto;
+}
+.center-box {
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 60px;
+    border: 2px solid #ebebec;
+    border-radius: 8px;
+    .title2 {
+        height: 72px;
+        border-bottom: 2px solid #f6f6f6;
+        text-align: center;
+        font-size: 24px;
+        color: #636363;
+        font-weight: 300;
+        line-height: 70px;
+    }
+    .title1 {
+        height: 72px;
+        border-bottom: 2px solid #f6f6f6;
+        text-align: left;
+        font-size: 24px;
+        color: #636363;
+        font-weight: 300;
+        line-height: 70px;
+        span {
+            padding-left: 40px;
+        }
+        .step {
+            display: inline-block;
+            float: right;
+            width: 100px;
+            height: 100%;
+            margin-right: 40px;
+        }
+        .icon1 {
+            background: url(../img/step_singup_a1.png) no-repeat center;
+        }
+        .icon2 {
+            background: url(../img/step_singup_a2.png) no-repeat center;
+        }
+    }
+     .p1 {
+         padding-top: 60px;
+     }
+     .p2 {
+         padding-top: 40px;
+     }
+    .main {
+        width: 320px;
+        height: auto;
+        margin: 40px auto;
+        #submit{
+            margin: 0px;
+            display: inline-block;
+            float: right;
+        }
+        input[name="forget-btn1"] {
+            margin-bottom: 40px;
+        }
+        .buttons {
+            margin: 40px 0px;
+            height: 50px;
+            .btn {
+                width: 220px;
+            }
+            .bbtn{
+                float: left;
+            }
+        }
+        .desc2 {
+            margin-bottom: 40px;
+            font-size: 14px;
+            color: #646464;
+            height: 14px;
+        }
+        #success {
+            .show-icon {
+                background: url(../img/img_120_success_2.png) no-repeat center;
+            }
+        }
+        #failure {
+            .show-icon {
+                background: url(../img/img_120_error_2.png) no-repeat center;
+            }
+        }
+        .show-icon {
+           width: 120px;
+           height: 120px;
+           margin: 0 auto;
+        }
+        .figcaption {
+            margin-top: 40px;
+            text-align: center;
+            line-height: 150%;
+            font-size: 16px;
+            color: #646464;
+            margin-bottom: 60px;
+        }
+        .m5 {
+            margin: 20px 0px 40px 0px;
+        }
+        .m4 {
+            margin-bottom: 40px;
+        }
+        .re-success {
+            margin: 40px 0px 20px 0px;
+            font-size: 16px;
+            color: #646464;
+            height: 16px;
+            line-height: 16px;
+            padding-left: 26px;
+            background: url(../img/icon_16_tick.png) no-repeat left;
+        }
+        .desc {
+            word-wrap: break-word;
+            word-break: break-all;
+            font-size: 14px;
+            color: #646464;
+            height: auto;
+            line-height: 150%;
+            margin-bottom: 0px;
+        }
+        .m2 {
+            margin: 40px 0px 60px 0px;
+        }
+        .m3 {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        .w1 {
+            width: 320px;
+        }
+        .tip {
+            font-size: 12px;
+            color: #646464;
+            padding-left: 20px;
+            margin: 0px;
+            a {
+                text-decoration: underline;
+                color: #8C65D7;
+            }
+            &:last-child{
+                margin-bottom: 60px;
+            }
+        }
+        .cloud-input {
+           color: #313131;
+           height: 50px;
+//         line-height: 48px;
+           display: block;
+           border: 1px solid #e1e1e1;
+           border-radius: 4px;
+           padding-left: 12px;
+           font-size: 14px;
+       }
+       p {
+           color: #646464;
+           font-size: 14px;
+           margin-bottom: 20px;
+       }
+       .link {
+            height: 14px;
+            margin-top: 20px;
+            padding-bottom: 40px;
+            font-size: 14px;
+            text-align: right;
+            span{
+                color: #646464;
+            }
+            a {
+                text-decoration: underline;
+                color: #8C65D7;
+            }
+       }
+       .checkcode {
+           margin-top: 20px;
+           margin-bottom: 40px;
+           height: 50px;
+           .codetext {
+               width: 180px;
+               margin-right: 10px;
+               display: inline-block;
+               float: left;
+           }
+           .code_img {
+                float: left;
+                width: 86px;
+                height: 50px;
+                vertical-align: top;
+                display: inline-block;
+                margin-right: 4px;
+                /* background-color: #f6f6f6; */
+            }
+            .flash {
+                float: left;
+                margin-top: 8px;
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                background: url(../img/flash.png) no-repeat center center;
+                cursor: pointer;
+                cursor: -ms-pointer;
+             }
+       }
+    }
+}
+#forget {
+    .show-icon {
+        background: url(../img/img_120_lock_2.png) no-repeat center;
+     }
+}
+#register_step2,#forget_step2 {
+    .link {
+        text-align: left;
+        margin-bottom: 40px;
+        padding-bottom: 0px;
+    }
+    input[id="password"] {
+        margin-bottom: 20px;
+    }
+    #nextStep2 {
+        margin-top: 40px;
+    }
+}
+.bbtn {
+    width: 80px;
+    height: 50px;
+    line-height: 48px;
+    display: inline-block;
+    border: 1px solid #8c65d7;
+    border-radius: 4px;
+    color: #8b65d6;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+.bbtn:hover {
+    background-color: #8c65d7;
+    color: #fff;
+}

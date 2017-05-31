@@ -1,0 +1,116 @@
+.lo-container {
+    width: 100%;
+    height: calc(100% - 160px);
+    .main{
+        min-height: 516px;
+        height: calc(100% - 160px);
+        background: url(../img/img_login_bg.jpg) no-repeat center;
+        background-size: 100% 100%;
+        .center {
+            width: 1200px;
+            height: 600px;
+            margin: 0 auto;
+            .login-box {
+                float: right;
+                margin-top: 5%;
+                width: 400px;
+//              height: 440px;
+                border-radius: 8px;
+                background-color: #fff;
+                .title {
+                    height: 72px;
+                    border-bottom: 2px solid #f6f6f6;
+                    text-align: center;
+                    font-size: 24px;
+                    color: #636363;
+                    font-weight: 300;
+                    line-height: 70px;
+                }
+                .login-mian {
+                    width: 320px;
+//                  height: 328px;
+                    margin: 0 auto;
+                    padding-top: 40px;
+                    .cloud-input {
+                       width: 320px;
+                       height: 50px;
+                       position: relative;
+                       margin-bottom: 20px;
+                       input {
+                           width: 320px;
+                           color: #313131;
+                           height: 50px;
+                           display: block;
+                           border: 1px solid #e1e1e1;
+                           border-radius: 4px;
+                           font-size: 14px;
+                           padding: 15px 12px;
+                       }
+                      .tip {
+                          display: none;
+                          position: absolute;
+                          top:-8px;
+                          left: 10px;
+                          z-index: 2;
+                          height: 10px;
+                          background-color: #fff;
+                          color: #646464;
+                          font-size: 10px;
+                          padding-right: 6px;
+                          padding-left: 6px;
+                      }
+                    }
+                    .link {
+                        height: 14px;
+                        margin-top: 20px;
+                        margin-bottom: 40px;
+                        a {
+                            color: #8B65D6;
+                            font-size: 14px;
+                            cursor: pointer;
+                            float: left;
+                        }
+                        a:last-child {
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+.cloud-check {
+    width: 100%;
+    height: 24px;
+    margin-bottom: 40px;
+    .checkbox {
+        display: inline-block;
+        height: 24px;
+        vertical-align: middle;
+        .btn-check {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            cursor: pointer;
+            margin-right: 10px;
+            background: url(../img/check_box_nor.png) no-repeat center center;
+        }
+        input[type="checkbox"]:checked~ .btn-check {
+            background: url(../img/check_box_sel.png) no-repeat center center;
+        }
+    }
+    span {
+        color: #636363;
+        font-size: 14px;
+        display: inline-block;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+    }
+}
+
+

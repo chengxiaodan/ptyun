@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Pragma" content="no-caches" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/perfectPager.css" />
+		<link rel="stylesheet" href="css/table.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/showBo.css" />
+		<title>葡萄云-首页</title>
+	</head>
+
+	<body>
+		<section id="header"></section>
+		<div class="container">
+			<div class="index_nav">
+				<ul>
+					<li>
+						<a href="javaScript:void();">葡萄云&nbsp;&gt;&nbsp;</a></li>
+					<li>
+						<a href="javaScript:void();">APP&nbsp;管理</a>
+					</li>
+				</ul>
+			</div>
+			<div class="index-container">
+				<nav class="left-main">
+					<ul>
+						<li>
+							<a class="active" data-id="appManage">APP&nbsp;管理</a>
+						</li>
+						<!--<li>
+							<a data-id="second">功能2</a>
+						</li>
+						<li>
+							<a data-id="third">功能3</a>
+						</li>-->
+					</ul>
+				</nav>
+				<div class="right-mian">
+					<section id="appManage">
+						<div class="operation-btn">
+							<a id="addAPPbtn" class="btn2">添加APP</a>
+							<!--<a id="editAPPbtn" class="btn1">编辑</a>-->
+							<a id="deleteAPPbtn" class="btn1">删除</a>
+						</div>
+						<div class="item-table">
+							<table class="table">
+								<thead>
+									<tr>
+										<th> </th>
+										<!--<th>ID</th>-->
+										<th>NAME</th>
+										<th>SECRET_KEY</th>
+										<th>APPID</th>
+										<th>SERVICE</th>
+										<th>VERSION</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody id="appManageTable">
+								</tbody>
+							</table>
+							<div id="appPage" class="app-page">
+							</div>
+						</div>
+						<section id="addAPP" style="display: none;">
+							<div class="overlay"></div>
+							<div class="modal">
+								<div class="downline-box w1">
+									<div class="title">添加APP</div>
+									<div class="wrapper">
+									<div class="main">
+										<div class="inline m2">
+											<div class="cloud-input w2">
+												<div class="tip">NAME</div>
+												<input id="addAppName" type="text" placeholder="NAME" tabindex="2" />
+											</div>
+											<div class="cloud-input w3 m-left">
+												<div class="tip">VERSION</div>
+												<input id="addAppVersion" type="text" placeholder="VERSION" tabindex="3" />
+											</div>
+										</div>
+										<div class="cloud-input m1">
+											<div class="tip">URL</div>
+											<input id="addAppUrl" type="text" placeholder="URL" tabindex="4" />
+										</div>
+										<div class="inline m1">
+											<div class="cloud-input w2">
+												<div class="tip">TYPE</div>
+												<input id="addAppType" type="text" placeholder="TYPE" tabindex="5" />
+											</div>
+											<div class="cloud-input w3 m-left">
+												<div class="tip">BUILD-ID</div>
+												<input id="addAppBuildId" type="text" placeholder="BUILD-ID" tabindex="6" />
+											</div>
+										</div>
+										<div class="cloud-textarea m2">
+											<div class="tip">DESCRIPTION</div>
+											<textarea id="addAppDes" type="text" placeholder="DESCRIPTION" tabindex="7" ></textarea>
+										</div>
+										<div id="addapp_error" class="error"></div>
+										<div class="h2 m1">CHOOSE SERVICE:</div>
+										<div class="service-list">
+											<ul>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox" value="消息推送" id="add_1">
+															<label for="add_1" class="btn-check"></label>
+														</div>
+													</div><span>消息推送</span>
+												</li>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox" value="日志收集" id="add_2">
+															<label for="add_2" class="btn-check"></label>
+														</div>
+													</div><span>日志收集</span>
+												</li>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox" value="崩溃收集" id="add_3">
+															<label for="add_3" class="btn-check"></label>
+														</div>
+													</div><span>崩溃收集</span>
+												</li>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox"  value="数据采集" id="add_4">
+															<label for="add_4" class="btn-check"></label>
+														</div>
+													</div><span>数据采集</span>
+												</li>
+											</ul>
+											<ul>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox"  value="服务提供" id="add_5">
+															<label for="add_5" class="btn-check"></label>
+														</div>
+													</div><span>服务提供</span>
+												</li>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox"  value="云存储" id="add_6">
+															<label for="add_6" class="btn-check"></label>
+														</div>
+													</div><span>云存储</span>
+												</li>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox"  value="语言识别" id="add_7">
+															<label for="add_7" class="btn-check"></label>
+														</div>
+													</div><span>语言识别</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="cloud-btn">
+										<a class="cancle">取消</a>
+										<a id="save_addApp">保存</a>
+									</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section id="editAPP" style="display: none;">
+							<div class="overlay"></div>
+							<div class="modal">
+								<div class="downline-box w1">
+									<div class="title">编辑APP</div>
+									<div class="wrapper">
+									<div class="main">
+										<!--<div class="cloud-input m1">
+											<div class="tip">SECRET_KEY</div>
+											<input id="appSecretKey" type="text" placeholder="SECRET_KEY" readonly="readonly"/>
+										</div>-->
+										<div class="cloud-input m1">
+											<div class="tip">APPID</div>
+											<input id="editAppId" type="text" placeholder="APPID"  readonly="readonly"/>
+										</div>
+										<div class="inline m1">
+											<div class="cloud-input w2">
+												<div class="tip">NAME</div>
+												<input id="editAppName" type="text" placeholder="NAME" tabindex="2" />
+											</div>
+											<div class="cloud-input w3 m-left">
+												<div class="tip">VERSION</div>
+												<input id="editAppVersion" type="text" placeholder="VERSION" tabindex="3" />
+											</div>
+										</div>
+										<div class="cloud-input m1">
+											<div class="tip">URL</div>
+											<input id="editAppUrl" type="text" placeholder="URL" tabindex="4" />
+										</div>
+										<div class="inline m1">
+											<div class="cloud-input w2">
+												<div class="tip">TYPE</div>
+												<input id="editAppType" type="text" placeholder="TYPE" tabindex="5" />
+											</div>
+											<div class="cloud-input w3 m-left">
+												<div class="tip">BUILD-ID</div>
+												<input id="editAppBuildId" type="text" placeholder="BUILD-ID" tabindex="6" />
+											</div>
+										</div>
+										<div class="cloud-textarea m2">
+											<div class="tip">DESCRIPTION</div>
+											<textarea id="editAppDes" type="text" placeholder="DESCRIPTION" tabindex="7" ></textarea>
+										</div>
+										<div id="editapp_error" class="error"></div>
+										<div class="h2 m1">CHOOSE SERVICE:</div>
+										<div class="service-list">
+											<ul>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox" value="消息推送" id="edit_1">
+															<label for="edit_1" class="btn-check"></label>
+														</div>
+													</div><span>消息推送</span>
+												</li>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox" value="日志收集" id="edit_2">
+															<label for="edit_2" class="btn-check"></label>
+														</div>
+													</div><span>日志收集</span>
+												</li>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox" value="崩溃收集" id="edit_3">
+															<label for="edit_3" class="btn-check"></label>
+														</div>
+													</div><span>崩溃收集</span>
+												</li>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox" value="数据采集" id="edit_4">
+															<label for="edit_4" class="btn-check"></label>
+														</div>
+													</div><span>数据采集</span>
+												</li>
+											</ul>
+											<ul>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox" value="服务提供" id="edit_5">
+															<label for="edit_5" class="btn-check"></label>
+														</div>
+													</div><span>服务提供</span>
+												</li>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox" value="云存储" id="edit_6">
+															<label for="edit_6" class="btn-check"></label>
+														</div>
+													</div><span>云存储</span>
+												</li>
+												<li>
+													<div class="cloud-check">
+														<div class="checkbox">
+															<input type="checkbox" name="checkbox" value="语言识别" id="edit_7">
+															<label for="edit_7" class="btn-check"></label>
+														</div>
+													</div><span>语言识别</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="cloud-btn">
+										<a class="cancle">取消</a>
+										<a id="save_editApp">保存</a>
+									</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section id="deleteAPP" style="display: none;">
+							<div class="overlay"></div>
+							<div class="modal">
+								<div class="downline-box w1">
+									<div class="title">删除APP</div>
+									<div class="main2">
+										<figure>
+											<img src="img/img_120_waring_2.png" />
+											<figcaption>删除后该APP的一切数据及信息都将永久清除，且不可恢复<p>确定要删除吗？</p></figcaption>
+										</figure>
+									</div>
+									<div class="cloud-btn">
+										<a class="cancle">取消</a>
+										<a href="javaScript:void();" id="deletetr">删除</a>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+					<!--<section id="second">功能2</section>-->
+					<!--<section id="third">功能3</section>-->
+				</div>
+			</div>
+		</div>
+		<section id="footer"></section>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.perfectPager.min.js"></script>
+	<script src="js/Showbo.min.js"></script>
+	<script src="js/md5.min.js"></script>
+	<script src="js/sha1.min.js"></script>
+	<script src="js/index.min.js"></script>
+	<script src="js/util.min.js"></script>
+</html>

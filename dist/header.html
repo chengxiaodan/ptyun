@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<link rel="stylesheet" href="css/base.css" />-->
+	</head>
+	<body>
+		<header>
+			<nav class="pb-margin">
+				<a class="logo" href="index.html"></a>
+				<ul id="header_list1" class="header_list1" style="display: none;">
+					<li>
+						<a  class="active" href="login.html" >立即登录</a>
+					</li>
+					<li>
+						<a  href="register.html">免费注册</a>
+					</li>
+				</ul>
+				<ul id="header_list2" class="header_list2">
+					<li>
+						<label id="user_label" for="childs-3" class="childs-3"></label>
+						<ul id="childs-3-ul">
+							<li>
+								<a href="forgetPW.html">修改密码</a>
+							</li>
+							<li>
+								<a id="exit">退出登录</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section id="leave_enter" style="display: none;">
+			<div class="overlay"></div>
+			<div class="modal">
+				<div class="cancle-box">
+					<div class="title pb-center">
+						<div class="close"></div>
+					</div>
+					<div class="cancle-body">
+						确定退出登录吗？
+					</div>
+					<div class="cancle-btn">
+						<a class="cancle">取消</a>
+						<a href="login.html" class="confire">确定</a>
+					</div>
+				</div>
+		</section>
+		<script>
+			if(getCookie("username") == null){
+				$("#header_list1").show();
+				$("#header_list2").hide();
+				window.location.href = "login.html";
+			}else{
+				$("#header_list1").hide();
+				$("#header_list2").show();
+				$("#user_label").text(getCookie("username"));
+			}
+			$('#exit').click(function() {
+				$('#leave_enter').show();
+			});
+			$('#leave_enter').find(".close").click(function() {
+				$('#leave_enter').hide();
+			});
+			$('#leave_enter').find(".cancle").click(function() {
+				$('#leave_enter').hide();
+			});
+			function getCookie (name) {
+				var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+				if(arr = document.cookie.match(reg))
+					return unescape(arr[2]);
+				else
+					return null;
+			};
+			// 根据参数名称获取value    
+			function getUrlParameter(paramKey) {
+				var sURLVariables, i, sParameterName, sPageURL = window.location.search.substring(1);
+				if(sPageURL) {
+					sURLVariables = sPageURL.split("&");
+					for(i = 0; i < sURLVariables.length; i++) {
+						sParameterName = sURLVariables[i].split("=");
+						if(sParameterName[0] === paramKey) return sParameterName[1]
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

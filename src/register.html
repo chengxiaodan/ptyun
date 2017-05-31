@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Pragma" content="no-caches" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/showBo.css" />
+		<link rel="stylesheet" href="css/register.css" />
+		<title>葡萄云-注册</title>
+	</head>
+
+	<body>
+		<header>
+			<nav class="pb-margin"  id="header_list">
+				<a class="logo" href="index.html"></a>
+				<ul id="header_list1" class="header_list1">
+					<li>
+						<a href="login.html" >立即登录</a>
+					</li>
+					<li>
+						<a class="active" href="register.html">免费注册</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="container">
+			
+			<!--
+            	作者：chengxiaodan1314@163.com
+            	时间：2017-03-17
+            	描述：注册
+            -->
+			
+			<section id="register" style="display: block;">
+				<div class="center-box wh1">
+					
+					<!--
+                    	作者：chengxiaodan1314@163.com
+                    	时间：2017-03-17
+                    	描述：注册第一步，发送验证码
+                    -->
+					
+					<section id="register_step1" style="display: block;">
+						<div class="title1">
+							<span>注册</span>
+							<div class="step icon1"></div>
+						</div>
+						<div class="main p2">
+							<input id="username" class="cloud-input w1" type="text" placeholder="手机号/邮箱" tabindex="1" maxlength="50" />
+							<div id="un_error" class="error"></div>
+							<div class="checkcode">
+								<input type="text" id="codetext" class="cloud-input codetext" placeholder="识别码" maxlength="10">
+								<span class="code_img"><img id="code" width="84" height="48" src="https://api-open.putao.com/?identity=imgcode&random=123&method=verify.image.get"></span>
+								<!--<span class="code_img"><img id="code" width="84" height="48" src="http://dev-api-open.ptdev.cn/?identity=imgcode&random=123&method=verify.image.get"></span>-->
+								<span id="flash" class="flash"></span>
+							</div>
+							<div id="co_error" class="error"></div>
+							<p>点击下一步发送验证码到手机或邮箱</p>
+							<a id="nextStep1" class="btn normal" >下一步</a>
+							<div class="link">
+								<span>已有账号？</span>
+								<a href="login.html" name="login">直接登录</a>
+							</div>
+						</div>
+					</section>
+					
+					<!--
+                    	作者：chengxiaodan1314@163.com
+                    	时间：2017-03-17
+                    	描述：注册第二步，输入密码，提交注册信息
+                    -->
+					
+					<section id="register_step2" style="display: none;">
+						<div class="title1">
+							<span>注册</span>
+							<div class="step icon2"></div>
+						</div>
+						<div class="main p2">
+							<input id="getCode" class="cloud-input w1" type="text" placeholder="收到的验证码" tabindex="1" />
+							<div class="link">
+								<span>如果一段时间没有收到</span>
+								<a  id="regetCode">请重新获取</a>
+							</div>
+							<input id="password" class="cloud-input w1" type="password" placeholder="登录密码" tabindex="2" />
+							<!--<div id="pw_error" class="error"></div>-->
+							<input id="secondPW" class="cloud-input w1 m5" type="password" placeholder="请再次输入登录密码" tabindex="3" />
+							<div id="spw_error" class="error"></div>
+							<a id="nextStep2" class="btn normal">注册</a>
+						</div>
+					</section>
+				</div>
+			</section>
+			
+			<!--
+            	作者：chengxiaodan1314@163.com
+            	时间：2017-03-17
+            	描述：注册成功
+            -->
+			
+			<section id="rg_success" style="display: none;">
+				<div class="center-box wh1">
+					<div class="title2">注册</div>
+					<div class="main p1">
+						<!--
+	                    	作者：chengxiaodan1314@163.com
+	                    	时间：2017-03-17
+	                    	描述：激活成功
+	                    -->
+						
+						<section id="success" style="display: block;">
+							<div class="show-icon"></div>
+							<p class="figcaption">注册成功</p>
+							<a class="btn normal m4" href="login.html">返回登录(<span class="timer">5</span>s)</a>
+						</section>
+						<!--<div class="re-success">注册成功！</div>-->
+						<!--<p class="desc">葡萄科技向您的邮箱&nbsp;<span id="address">376846826@qq.com</span>&nbsp;发送了一封确认邮件</p>
+						<p class="desc">点击邮件里的确认链接即可激活账号</p>
+						<a id="goEail" class="btn normal m2" href="javaScript:void(0);">进入邮箱</a>
+						<p class="desc m3">没有收到确认邮件？你可以：</p>
+						<p class="tip">·到邮箱中的垃圾邮件、广告邮件目录中找找</p>
+						<p class="tip">·如果确认没有收到，可以&nbsp;<a id="" href="/">点此重发</a>&nbsp;确认邮件</p>
+						<p class="tip">·直接联系客服：400-123-4567</p>-->
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<span>Copyright © 2017, Shanghai Putao Technology Co., Ltd. All Rights Reserved.</span>
+			<span>上海葡萄纬度科技有限公司&nbsp;&nbsp;沪ICP备15015904号-3</span>
+		</footer>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/Showbo.min.js"></script>
+	<script src="js/md5.min.js"></script>
+	<script src="js/sha1.min.js"></script>
+	<script src="js/register.min.js"></script>
+
+</html>

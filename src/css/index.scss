@@ -1,0 +1,564 @@
+.app-page {
+    height: 110px;
+    width: 100%;
+    line-height: 110px;
+    text-align: center;
+    display: none;
+}
+.index_nav {
+    width: 1200px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    ul {
+        li{
+            float: left;
+            text-align: left; 
+            a {
+                font-size: 14px;
+                color: #646464;
+                cursor: default;
+            }
+        }
+    }
+}
+.container {
+    height: 1502px;
+}
+.index-container {
+    width: 1200px;
+    height: 1404px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    border: 1px solid #EBEBEC;
+    border-left: 0px;
+    border-radius: 8px;
+}
+.left-main {
+    width: 160px;
+    height: 1402px;
+    display: inline-block;
+    background-color: #f3f0f7;
+    padding-top: 10px;
+    float: left;
+    border-top-left-radius:8px;
+    border-bottom-left-radius:8px;
+    ul {
+        width: 100%;
+        height: 100%;
+        li {
+            width: 100%;
+            height: 70px;
+            a {
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                padding-left: 16px;
+                display: block;
+                font-size: 16px;
+                text-decoration: none;
+                color: #959595;
+                text-align: left;
+                cursor: pointer;
+                border: 0px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            a:hover {
+                color: #8C65D7;
+            }
+            .active {
+                background-color: #8C65D7;
+                color: #fff;
+            }
+            a.active:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+.right-mian {
+    width: calc(100% - 160px);
+    height: 1402px;
+    background-color: #FFFFFF;
+    display: inline-block;
+    float: left;
+    border-top-right-radius:8px;
+    border-bottom-right-radius:8px;
+    .operation-btn {
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        padding-top: 25px;
+        a {
+            height: 30px;
+            border-radius: 4px;
+            display: inline-block;
+            float: right;
+            cursor: pointer;
+        }
+        .btn1 {
+            width: 80px;
+            line-height: 28px;
+            border: 1px solid #8C65D7;
+            font-size: 14px;
+            color: #8C65D7;
+            background-color: #fff;
+            &:hover {
+                background-color: #F3F0F8;
+            }
+            &:active {
+                background-color: #EFE9F8;
+            }
+        }
+        .btn1:last-child {
+           margin-right: 10px;
+        }
+        .btn2 {
+            margin: 0px 20px;
+            width: 100px;
+            line-height: 30px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #8C65D7;
+            &:hover {
+                background-color: #7653B8;
+            }
+            &:active {
+                background-color: #6947A8;
+            }
+        }
+    }
+    .item-table {
+        width: 100%;
+        height: auto;
+    }
+}
+.cloud-check {
+    width: 68px;
+    height: 24px;
+    line-height: 24px;
+    .checkbox {
+        display: inline-block;
+        height: 24px;
+        vertical-align: middle;
+//      margin-left: -28px;
+        .btn-check {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            cursor: pointer;
+            margin-right: 10px;
+            background: url(../img/check_box_nor.png) no-repeat center center;
+        }
+        input[type="checkbox"]:checked~ .btn-check {
+            background: url(../img/check_box_sel.png) no-repeat center center;
+        }
+    }
+}
+.checkbox {
+    display: inline-block;
+    height: 24px;
+    vertical-align: middle;
+    position: relative;
+    .btn-check {
+        position: absolute;
+        top: 0px;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 10px;
+        background: url(../img/check_box_nor.png) no-repeat center center;
+    }
+    input[type="checkbox"] {
+        position: absolute;
+        top:0px;
+    }
+    input[type="checkbox"]:checked~ .btn-check {
+        background: url(../img/check_box_sel.png) no-repeat center center;
+    }
+}
+.item-table {
+    height: 1212px;
+   .table {
+        height: 1212px;
+        tbody {
+            overflow: hidden;
+            max-height: 1148px;
+            tr {
+                td {
+                    a {
+                        border: 1px solid #8c65d7;
+                        border-radius: 4px;
+                        width: auto;
+                        padding: 0px 12px;
+                        height: 30px;
+                        display: inline-block;
+                        line-height: 30px;
+                        text-align: center;
+                        text-align: -moz-center;
+                        text-align: -webkit-center;
+                        color: #8C68D4;
+                        font-size: 13px;
+                        cursor: pointer;
+                        cursor: -ms-pointer;
+                    }
+                    a:hover {
+                        color: #FFFFFF;
+                        background-color: #8C65D7;
+                    }
+                }
+            }
+        }
+   }
+   tr{
+      .cloud-check {
+        width: 50px;
+       .checkbox {
+         margin-left: -26px;
+         .btn-check {
+            margin-right: 0px;
+          }
+        }
+       }
+   }
+   .table>thead>tr>th:nth-child(1) {
+       width: 50px;
+       min-width: 50px;
+       max-width: 50px;
+   }
+// .table>thead>tr>th:nth-child(2) {
+//     width: 30px;
+//     min-width: 30px;
+//     max-width: 30px;
+// }
+   .table>thead>tr>th:nth-child(2) {
+       width: 171px;
+       min-width: 171px;
+       max-width: 171px;
+   }
+   .table>thead>tr>th:nth-child(3) {
+       width: 225px;
+       max-width: 225px;
+       min-width: 225px;
+   }
+   .table>thead>tr>th:nth-child(4) {
+       width: 170px;
+       max-width: 170px;
+       min-width: 170px;
+   }
+   .table>thead>tr>th:nth-child(5) {
+       width: 197px;
+       max-width: 197px;
+       min-width: 197px;
+    }
+   .table>thead>tr>th:nth-child(6){
+       width: 60px;
+       min-width: 60px;
+       max-width: 60px;
+    }
+   .table>thead>tr>th:nth-child(7){
+       width: 70px;
+       max-width: 70px;
+       min-width: 70px;
+    }
+    .table>tbody>tr>td:nth-child(1) {
+       width: 50px;
+       min-width: 50px;
+       max-width: 50px;
+    }
+//  .table>tbody>tr>td:nth-child(2) {
+//     width: 40px;
+//     min-width: 40px;
+//     max-width: 40px;
+//  }
+    .table>tbody>tr>td:nth-child(2) {
+       width: 181px;
+       min-width: 181px;
+       max-width: 181px;
+   }
+   .table>tbody>tr>td:nth-child(3) {
+       width: 268px;
+       max-width: 268px;
+       min-width: 268px;
+   }
+    .table>tbody>tr>td:nth-child(4) {
+       width: 180px;
+       max-width: 180px;
+       min-width: 180px;
+    }
+    .table>tbody>tr>td:nth-child(5) {
+       width: 200px;
+       max-width: 200px;
+       min-width: 200px;
+    }
+    .table>tbody>tr>td:nth-child(6) {
+       width: 75px;
+       min-width: 75px;
+       max-width: 75px;
+    }
+    .table>tbody>tr>td:nth-child(7) {
+       width: 70px;
+       max-width: 70px;
+       min-width: 70px;
+    }
+    .service-list {
+        width: 200px;
+        ul {
+           margin-bottom: 10px;
+           height: 16px;
+           li {
+                float: left;
+                .service-info{
+                    width: 95px;
+                    padding-left: 26px;
+                    height: 16px;
+                    line-height: 16px;
+                    font-size: 16px;
+                    margin-right: 10px;
+                }
+                .success {
+                    color: #646464;
+                    background: url(../img/icon_16_tick.png) no-repeat left;
+                }
+                .fail {
+                    color: #ED5564;
+                    background: url(../img/icon_16_cross.png) no-repeat left;
+                }
+                &:last-child {
+                    .service-info{
+                        margin-right: 0px;
+                    }
+                }
+            }
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+        
+    }
+}
+#addAPP,#editAPP{
+    .modal {
+        top: 15%;
+    }
+    @media screen and (max-height: 800px){
+        .modal {
+            top: 15px;
+            .wrapper {
+                max-height: 580px;
+                overflow-y: auto;
+            }
+        }
+    }
+}
+.modal {
+    position: fixed;
+    top: 25%;
+    left: 0px;
+    z-index: 10002;
+    width: 100%;
+    .w1 {
+        width: 640px;
+        height: auto;
+    }
+    .w2 {
+        width: 280px;
+        float: left;
+    }
+    .w3 {
+        width: 180px;
+        float: right;
+    }
+    .m-left {
+        margin-left: 20px;
+    }
+    .downline-box {
+        margin: 0 auto;
+        background: #ffffff;
+        box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        .m1 {
+            margin-bottom: 20px;
+        }
+        .m2 {
+            margin-bottom: 30px;
+        }
+        .title {
+            line-height: 64px;
+            height: 64px;
+            font-size: 18px;
+            color: #646464;
+            font-weight: bold;
+            padding-left: 40px;
+            text-align: left;
+            border-bottom: 2px solid #F6F6F6;
+        }
+        .wrapper {
+            padding-top: 30px;
+        }
+        .main2 {
+            height: 190px;
+            width: 480px;
+            margin: 0 auto;
+            padding-top: 15px;
+            figure {
+                font-size: 16px;
+                position: relative;
+                img {
+                    display: inline-block;
+                    position: absolute;
+                    left: 0px;
+                    top:0px;
+                }
+                figcaption {
+                    width: calc(100% - 120px);
+                    line-height: 160%;
+                    color: #646464;
+                    position: absolute;
+                    left: 140px;
+                    top:26px;
+                    p {
+                        color: #797979;
+                    }
+                }
+                
+            }
+        }
+        .main {
+            width: 480px;
+            height: auto;
+            margin: 0 auto;
+            .cloud-textarea {
+               height: 100px;
+               position: relative;
+               textarea {
+                   width: 100%;
+                   color: #313131;
+                   height: 100px;
+                   display: block;
+                   border: 1px solid #e1e1e1;
+                   border-radius: 4px;
+                   padding-left: 12px;
+                   font-size: 14px;
+                   font-weight: 300;
+                   text-align: justify;
+                   padding: 8px 13px 0px 12px;
+                   resize: none;
+               }
+               .tip {
+                  display: none;
+                  position: absolute;
+                  top:-8px;
+                  left: 10px;
+                  z-index: 2;
+                  padding-right: 6px;
+                  height: 10px;
+                  background-color: #fff;
+                  color: #646464;
+                  font-size: 10px;
+                  padding-left: 6px;
+              }
+            }
+            .cloud-input {
+               height: 50px;
+               position: relative;
+               input {
+                   width: 100%;
+                   color: #313131;
+                   height: 50px;
+                   display: block;
+                   border: 1px solid #e1e1e1;
+                   border-radius: 4px;
+                   padding-left: 12px;
+                   font-size: 14px;
+                   font-weight: 300;
+               }
+               .tip {
+                  display: none;
+                  position: absolute;
+                  top:-8px;
+                  left: 10px;
+                  z-index: 2;
+                  height: 10px;
+                  background-color: #fff;
+                  color: #646464;
+                  font-size: 10px;
+                  padding-right: 6px;
+                  padding-left: 6px;
+              }
+            }
+            .inline {
+                height: 50px;
+                .cloud-input {
+                    display: inline-block;
+                }
+            }
+            .service-list {
+                width: 100%;
+                ul {
+                   height: 24px;
+                   margin-bottom: 20px;
+                   li {
+                        float: left;
+                        width: 120px;
+                        height: 24px;
+                        line-height: 24px;
+                        padding-right: 20px;
+                        font-size: 14px;
+                        color: #313131;
+                        text-align: left;
+                        .cloud-check {
+                            width: 34px;
+                            height: 24px;
+                            line-height: 24px;
+                            display: inline-block;
+                            .checkbox {
+                                .btn-check  {
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .h2 {
+                font-size: 16px;
+                color: #646464;
+                font-weight: bold;
+                height: 16px;
+            }
+        }
+        .cloud-btn {
+                height: 72px;
+                border-top: 2px solid #F6F6F6;
+                padding: 20px;
+                a {
+                    width: 80px;
+                    height: 30px;
+                    line-height: 28px;
+                    border-radius: 4px;
+                    display: inline-block;
+                    float: right;
+                    cursor: pointer;
+                    margin-right: 20px;
+                    border: 1px solid #8C65D7;
+                    font-size: 14px;
+                    color: #8C65D7;
+                    background-color: #fff;
+                    text-align: center;
+                     &:hover {
+                         color: #fff;
+                        background-color: #7653B8;
+                    }
+                    &:active {
+                        color: #fff;
+                        background-color: #6947A8;
+                    }
+                }
+            }
+    }
+}
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Pragma" content="no-caches" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/showBo.css" />
+		<link rel="stylesheet" href="css/register.css" />
+		<title>葡萄云-忘记密码</title>
+	</head>
+	<body>
+		<section id="header"></section>
+		<div class="container">
+			<section id="forget" style="display: block;">
+				<div class="center-box wh1">
+					<!--
+                    	作者：chengxiaodan1314@163.com
+                    	时间：2017-03-17
+                    	描述：忘记密码
+                    -->
+					
+					<section id="forget_step1" style="display: block;">
+						<div class="title2">忘记密码</div>
+						<div class="main">
+							<input id="username" class="cloud-input w1" type="text" placeholder="手机号/邮箱" tabindex="1" maxlength="50" />
+							<div id="un_error" class="error"></div>
+							<div class="checkcode">
+								<input type="text" id="codetext" class="cloud-input codetext" placeholder="识别码">
+								<span class="code_img"><img id="code" width="84" height="48" src="https://api-open.putao.com/?identity=imgcode&random=123&method=verify.image.get"></span>
+								<!--<span class="code_img"><img id="code" width="84" height="48" src="http://dev-api-open.ptdev.cn/?identity=imgcode&random=123&method=verify.image.get"></span>-->
+								<span id="flash" class="flash"></span>
+							</div>
+							<div id="co_error" class="error"></div>
+							<p>点击下一步发送验证码到手机或邮箱</p>
+							<a id="forget-btn1"  class="btn normal">下一步</a>
+						</div>
+					</section>
+					
+					<!--
+                    	作者：chengxiaodan1314@163.com
+                    	时间：2017-03-17
+                    	描述：修改密码
+                    -->
+					
+					<section id="forget_step2" style="display: none;">
+						<div class="title2">修改密码</div>
+						<div class="main">
+							<div class="desc2">您正在为账号&nbsp;<span id="username2"></span>&nbsp;修改密码</div>
+							<input id="getCode" class="cloud-input w1" type="text" placeholder="收到的验证码" tabindex="1" />
+							<div class="link">
+								<span>如果一段时间没有收到</span>
+								<a id="regetCode">请重新获取</a>
+							</div>
+							<input id="password" class="cloud-input w1" type="password" placeholder="请设置新登录密码" tabindex="2" />
+							<div id="pw_error" class="error"></div>
+							<input id="secondPW" class="cloud-input w1" type="password" placeholder="请再次输入新登录密码" tabindex="3" />
+							<div id="spw_error" class="error"></div>
+							<div class="buttons">
+								<a id="goback" href="javaScript:void(0);" class="bbtn">返回</a>
+								<a id="submit"  class="btn normal">提交</a>
+								<!--<input id="submit" type="button" class="btn disable" value="提交" />-->
+							</div>
+						</div>
+					</section>
+					
+					<!--
+                    	作者：chengxiaodan1314@163.com
+                    	时间：2017-03-17
+                    	描述：修改密码成功
+                    -->
+					
+					<section id="forget_step3" style="display: none;">
+						<div class="title2">修改密码</div>
+						<div class="main p1">
+							<div class="show-icon"></div>
+							<p class="figcaption">密码修改成功</p>
+							<a class="btn normal m4" href="login.html">返回登录(<span class="timer">5</span>s)</a>
+						</div>
+					</section>
+				</div>
+			</section>
+		</div>
+		<section id="footer"></section>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/Showbo.min.js"></script>
+	<script src="js/md5.min.js"></script>
+	<script src="js/sha1.min.js"></script>
+	<script src="js/util.min.js"></script>
+	<script src="js/forgetPW.min.js"></script>
+</html>

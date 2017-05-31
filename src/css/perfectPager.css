@@ -1,0 +1,77 @@
+.perfectPager{
+	color: #ccc;
+	font-size: 14px;
+	text-align: center;
+	text-align: -webkit-center;
+	text-align: -moz-center;
+}
+.perfectPager a{
+	display: inline-block;
+	color: #BDBDBD;
+	height: 32px;
+	line-height: 32px;
+	margin: 0 4px;
+	text-align: center;
+	padding: 0px 10px;
+	text-align: -webkit-center;
+	text-align: -moz-center;
+	vertical-align: middle;
+	text-decoration: none;
+}
+.perfectPager a:hover{
+	text-decoration: none;
+	color: #8C65D7;
+}
+.chNumber {
+	border:1px solid #f5f5f5;
+	/*width: 32px;*/
+}
+.chNumber:HOVER {
+	border: 1px solid #8C65D7;
+	background:rgba(139,100,215,0.10);
+	color: #8C65D7;
+}
+
+.nextPage {
+	border:1px solid #f5f5f5;
+	width:78px;
+}
+.nextPage:HOVER {
+	border:1px solid #8C65D7;
+	background:rgba(139,100,215,0.10);
+}
+.prevPage {
+	border:1px solid #f5f5f5;
+	width:78px;
+}
+.prevPage:HOVER {
+	border:1px solid #8C65D7;
+	background:rgba(139,100,215,0.10);
+}
+.perfectPager span.current{
+	display: inline-block;
+	border: 1px solid #FFFFFF;
+	height: 32px;
+	line-height: 32px;
+	color: #8C65D7;
+	text-align: center;
+	text-align: -webkit-center;
+	text-align: -moz-center;
+	vertical-align: middle;
+	width: 32px;
+	margin: 0 4px;
+}
+.perfectPager span.disabled{
+	display: inline-block;
+	height: 32px;
+	line-height: 32px;
+	color: #BDBDBD;
+	text-align: center;
+	text-align: -webkit-center;
+	text-align: -moz-center;
+	background: #f2f2f2;
+	border: 1px solid #BDBDBD;
+	vertical-align: middle;
+	width: 78px;
+	margin: 0 4px;
+}

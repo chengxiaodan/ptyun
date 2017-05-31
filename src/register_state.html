@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Pragma" content="no-caches" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/register.css" />
+		<title>葡萄云-注册</title>
+	</head>
+	<body>
+			<header>
+				<nav class="pb-margin"  id="header_list">
+					<a class="logo" href="index.html"></a>
+					<ul id="header_list1" class="header_list1">
+						<li>
+							<a href="login.html" >立即登录</a>
+						</li>
+						<li>
+							<a class="active"  href="register.html">免费注册</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div class="container">
+				<div class="center-box wh1">
+					<div class="title2">注册</div>
+					<div class="main p1">
+						
+						<!--
+	                    	作者：chengxiaodan1314@163.com
+	                    	时间：2017-03-17
+	                    	描述：激活成功
+	                    -->
+						
+						<section id="success" style="display: block;">
+							<div class="show-icon"></div>
+							<p class="figcaption">激活成功</p>
+							<a class="btn normal m4" href="login.html">返回登录(<span class="timer">5</span>s)</a>
+						</section>
+						
+						<!--
+	                    	作者：chengxiaodan1314@163.com
+	                    	时间：2017-03-17
+	                    	描述：激活失败
+	                    -->
+						
+						<section id="failure" style="display: none;">
+							<div class="show-icon"></div>
+							<p class="figcaption">激活失败</br>您的激活激活邮件已超时。</p>
+							<a class="btn normal m4" href="javaScript:void(0);">重新发送激活邮件</a>
+						</section>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<span>Copyright © 2017, Shanghai Putao Technology Co., Ltd. All Rights Reserved.</span>
+				<span>上海葡萄纬度科技有限公司&nbsp;&nbsp;沪ICP备15015904号-3</span>
+			</footer>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script>
+		//激活成功
+		$(function(){
+			var time =null;
+			timer();
+			function timer (){
+				var num = 5;
+				time = setInterval(function() {
+					num--;
+					if(num == 0) {
+						window.location.href = "login.html";
+						clearInterval(time);
+					} else {
+						$(".timer").text(num+"");
+					}
+				}, 1000);
+			};
+		})
+		
+	</script>
+</html>

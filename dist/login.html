@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Pragma" content="no-caches" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/showBo.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<title>葡萄云-登录</title>
+	</head>
+	<body>
+		<header>
+			<nav class="pb-margin"  id="header_list">
+				<a class="logo" href="index.html"></a>
+				<ul id="header_list1" class="header_list1">
+					<li>
+						<a  class="active" href="login.html" >立即登录</a>
+					</li>
+					<li>
+						<a  href="register.html">免费注册</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="lo-container">
+			<div class="main">
+				<div class="center">
+					<div class="login-box">
+						<div class="title">登录</div>
+						<form action="" method="post">
+							<div class="login-mian">
+								<div class="cloud-input">
+									<div class="tip">手机号/邮箱</div>
+									<input id="username" type="text" placeholder="手机号/邮箱" tabindex="1" maxlength="50"/>
+								</div>
+								<!--<div id="un" class="error"></div>-->
+								<div class="cloud-input">
+									<div class="tip">登录密码</div>
+									<input id="password" type="password" placeholder="登录密码" tabindex="2" maxlength="12" onpaste="return false" onselectstart="return false"/>
+								</div>
+								<div id="pw" class="error"></div>
+								<div class="cloud-check">
+									<div class="checkbox">
+										<input type="checkbox" name="checkbox" id="login_selected" />
+										<label for="login_selected" class="btn-check"></label>
+									</div>
+									<span>一周内免登录</span>
+								</div>
+								<!--<input name="login" type="button" class="btn normal" value="登录" />-->
+								<a id="login" class="btn normal">登录</a>
+								<div class="link">
+									<a href="register.html" name="register-user">免费注册</a>
+									<a href="forgetPW.html?login=false" name="forget-password">忘记密码</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<span>Copyright © 2017, Shanghai Putao Technology Co., Ltd. All Rights Reserved.</span>
+			<span>上海葡萄纬度科技有限公司&nbsp;&nbsp;沪ICP备15015904号-3</span>
+		</footer>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/Showbo.min.js"></script>
+	<script src="js/md5.min.js"></script>
+	<script src="js/sha1.min.js"></script>
+	<script src="js/login.min.js"></script>
+</html>
